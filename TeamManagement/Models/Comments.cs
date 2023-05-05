@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 
-namespace TeamManagement.Controllers.Models
+namespace TeamManagement.Models
 {
     public class Comments
     {
@@ -8,7 +8,7 @@ namespace TeamManagement.Controllers.Models
         public int TaskId { get; set; }
         public int UserId { get; set; }
         public string CommentText { get; set; }
-        
+
         public DateAndTime CommentDate { get; set; }
     }
 }

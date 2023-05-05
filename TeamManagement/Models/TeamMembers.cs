@@ -1,4 +1,4 @@
-﻿namespace TeamManagement.Controllers.Models
+﻿namespace TeamManagement.Models
 {
     public class TeamMembers
     {

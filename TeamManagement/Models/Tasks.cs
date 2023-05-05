@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 
-namespace TeamManagement.Controllers.Models
+namespace TeamManagement.Models
 {
     public class Tasks
     {
@@ -9,6 +9,6 @@ namespace TeamManagement.Controllers.Models
         public string Description { get; set; }
         public string Status { get; set; }
         public DateAndTime DueDate { get; set; }
-        public int TeamId {get; set; }
+        public int TeamId { get; set; }
     }
 }
