@@ -1,21 +1,18 @@
+import {ipko,vodafone,twitch,bmw,spotify, paypal} from '../Assets/index';
+
 export const navLinks = [
     {
-      id: "home",
+      path: "/",
       title: "Home",
     },
     {
-      id:"stats",
-      title:"Statistic"
+      path:"/account",
+      title:"Account"      
     },
     {
-      id: "clients",
-      title: "Clients",
-    },
-    {
-        id:"account",
-        title:"Account"
-    },
-
+      path:"clients",
+      sections:"Clients"
+    }
   ];
 
   export const stats = [
@@ -26,12 +23,39 @@ export const navLinks = [
     },
     {
       id: "stats-2",
-      title: "Trusted by Company",
-      value: "230+",
+      title: "Users Active",
+      value: "220K+",
     },
     {
       id: "stats-3",
       title: "Tasks Added",
-      value: "230K",
+      value: "230K+",
     },
   ];
+
+  export const logos = [
+    {
+      id:"ipko",
+      src:ipko,
+    },
+    {
+      id:"twitch",
+      src:twitch,
+    },
+    {
+      id:"vodafone",
+      src:vodafone,
+    },
+    {
+      id:"bmw",
+      src:bmw,
+    },
+    {
+      id:"spotify",
+      src:spotify,
+    },
+    {
+      id:"paypal",
+      src:paypal,
+    }
+  ]

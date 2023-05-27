@@ -5,6 +5,7 @@ import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import GetStarted from "./GetStarted";
 import Stats from "./Stats";
+import CTA from './CTA'
 
 export {
   Navbar,
@@ -14,4 +15,5 @@ export {
   Hero,
   GetStarted,
   Stats,
+  CTA,
 };
