@@ -3,8 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Task.Models;
 
-namespace TeamManagement.Models
+namespace Task.Models
 {
     public class TaskDBContext : DbContext
     {
@@ -19,14 +20,11 @@ namespace TeamManagement.Models
         public DbSet<TaskAssignees> TaskAssignees { get; set; }
         public DbSet<Comments> Comments { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            modelBuilder.Entity<Users>().ToTable("Users");
-            modelBuilder.Entity<Teams>().ToTable("Teams");
-            modelBuilder.Entity<TeamMembers>().ToTable("TeamMembers");
-            modelBuilder.Entity<Tasks>().ToTable("Tasks");
-            modelBuilder.Entity<TaskAssignees>().ToTable("TaskAssignees");
-            modelBuilder.Entity<Comments>().ToTable("Comments");
+            optionsBuilder.UseSqlServer("Data Source=.; Initial Catalog=Database; Integrated Security=True; TrustServerCertificate=True");
         }
+
     }
 }
