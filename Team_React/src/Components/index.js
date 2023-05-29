@@ -5,7 +5,11 @@ import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import GetStarted from "./GetStarted";
 import Stats from "./Stats";
-import CTA from './CTA'
+import CTA from './CTA';
+import Bussines from './Bussines';
+import Button from './Button'
+import Sidebar from './Sidebar';
+import NavbarDashboard  from "./NavbarDashboard";
 
 export {
   Navbar,
@@ -16,4 +20,8 @@ export {
   GetStarted,
   Stats,
   CTA,
+  Bussines,
+  Button,
+  Sidebar,
+  NavbarDashboard
 };

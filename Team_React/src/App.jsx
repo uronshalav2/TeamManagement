@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Hero, Clients, Testimonials, Footer, CTA } from './Components';
+import { Navbar, Hero, Clients, Testimonials, Footer, CTA, Bussines } from './Components';
 import Stats from './Components/Stats';
 
 const App = () =>
@@ -22,6 +22,11 @@ const App = () =>
     </div>
     <div className='bg-primary sm:px-16 px-6 flex justify-center items-start'>
       <div className='xl:max-w-[1280px] w-full'>
+      <Bussines />
+      </div>
+    </div>
+    <div className='bg-primary sm:px-16 px-6 flex justify-center items-start'>
+      <div className='xl:max-w-[1280px] w-full'>
       <Clients />
       </div>
     </div>
@@ -30,8 +35,12 @@ const App = () =>
       <CTA />
       </div>
     </div>
+    <div className='bg-primary sm:px-16 px-6 flex justify-center items-start'>
+      <div className='xl:max-w-[1280px] w-full'>
+      <Footer />
+      </div>
+    </div>
     <Testimonials />
-    <Footer />
   </div>
 )
 
