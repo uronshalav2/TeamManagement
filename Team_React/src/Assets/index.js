@@ -14,6 +14,7 @@ import send from './Send.svg';
 import star from './Star.svg';
 import shield from './Shield.svg';
 import person from './Person.svg';
+import loginbg from './loginbg.webp'
 
 export {
     logo,
@@ -32,4 +33,5 @@ export {
     star,
     shield,
     person,
+    loginbg,
 };

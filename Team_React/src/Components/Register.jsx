@@ -1,63 +1,59 @@
 import React, { Fragment } from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import styles from '../style'
+import axios from 'axios'
+import { Link, NavLink } from 'react-router-dom'
+import { useState } from 'react';
+import { loginbg } from '../Assets/index'
 
 export const Register = () => {
-  return (
-    <Fragment>
-        <div className="bg-discount-gradient w-full h-screen">
-        <div className="home flex justify-end">
-            <NavLink to={"/"} className={"w-[120px] h-[80px] text-gradient font-poppins mt-5 font-bold text-[24px]"}>Home</NavLink>
-        </div>
-            <div className="flex xs:p-5 md:p-5 p-0 flex-col justify-center">
-                <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                    <h2 className='mt-10 text-2xl text-start font-bold font-poppins leading-9 tracking-tight text-gradient'>
-                        Register
-                    </h2>
-                </div>
-                <div className='p-3 mt-5 sm:mx-auto rounded-lg sm:w-full sm:max-w-md'>
-                    <form className='space-y-6' action='#' method='POST'>
-                    <div>
-                            <label for="name" className='block text-sm font-normal font-poppins leading-6 text-dimWhite'>Full name</label>
-                            <div className='mt-2'>
-                                <input id='name' name='name' type='name' autoComplete='name' required className='block w-full duration-[0-3.s] rounded-md border-0 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inest focus:ring-indigo-600 sm:text-sm sm:leading-6' />
-                            </div>
-                        </div>
-                        <div>
-                            <label for="email" className='block text-sm font-normal font-poppins leading-6 text-dimWhite'>Email address</label>
-                            <div className='mt-2'>
-                                <input id='email' name='email' type='email' autoComplete='email' required className='block w-full duration-[0-3.s] rounded-md border-0 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inest focus:ring-indigo-600 sm:text-sm sm:leading-6' />
-                            </div>
-                        </div>
+    return (
+        <Fragment>
+            <section className="flex flex-col md:flex-row h-screen items-center">
 
-                        <div>
-                            <div className="flex items-center justify-between">
-                                <label for="password" className="block text-sm font-poppins font-normal leading-6 text-dimWhite">Password</label>
-                            </div>
-                            <div className="mt-2">
-                                <input id="password" name="password" type="password" autocomplete="current-password" required className="block w-full  duration-[0.3s] rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-                            </div>
-                        </div>
-                        <div>
-                            <div className="flex items-center justify-between">
-                                <label for="password" className="block text-sm font-poppins font-normal leading-6 text-dimWhite">Confirm Password</label>
-                            </div>
-                            <div className="mt-2">
-                                <input id="password" name="password" type="password" autocomplete="current-password" required className="block w-full  duration-[0.3s] rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-                            </div>
-                        </div>
-                        <div>
-                            <button type="submit" className="flex w-full justify-center rounded-md bg-cyan-600 px-3 py-1.5 text-sm font-semibold font-poppins leading-6 text-white shadow-sm hover:bg-cyan-700 duration-[0.3s] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
-                        </div>
-                    </form>
-                    <Link to="/Account/Login">
-                        <p className="mt-10 font-poppins text-center text-sm text-dimWhite">
-                            Already a memeber?
-                        </p>
-                    </Link>
+                <div className="hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
+                    <img src={loginbg} alt="" class="w-full h-full object-cover" />
                 </div>
-            </div>
-        </div>
-    </Fragment>
-)}
+
+                <div className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto  md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
+flex items-center justify-center">
+
+                    <div className="w-full h-100">
+
+
+                        <h1 className="text-xl md:text-2xl text-blue-700 font-bold leading-tight mt-12">Create your account</h1>
+
+                        <form className="mt-6" action="#" method="POST">
+                            <div>
+                                <label className="block text-gray-700">Write your first name</label>
+                                <input type="name" name="" id="" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
+                            </div>
+                            <div className='mt-4'>
+                                <label className="block text-gray-700">Write your last name</label>
+                                <input type="name" name="" id="" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
+                            </div>
+                            <div className='mt-4'>
+                                <label className="block text-gray-700">Your email address</label>
+                                <input type="name" name="" id="" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
+                            </div>
+                            <div className="mt-4">
+                                <label className="block text-gray-700">Choose a password</label>
+                                <input type="password" name="" id="" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+      focus:bg-white focus:outline-none" required />
+                            </div>
+
+                            <button type="submit" className="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
+    px-4 py-3 mt-6">Sign Up</button>
+                        </form>
+
+                        <hr className="my-6 border-gray-300 w-full" />
+                        <p className="mt-8">Already a member?<NavLink to={"/Account/Login"} className="text-blue-500 hover:text-blue-700 font-semibold"> Login instead</NavLink></p>
+
+                    </div>
+                </div>
+
+            </section>
+        </Fragment>
+    )
+}
 
 export default Register

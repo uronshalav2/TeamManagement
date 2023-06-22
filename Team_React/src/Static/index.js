@@ -21,8 +21,18 @@ export const navLinks = [
     path: 'cta',
     sections: "Get Started"
   },
-
 ];
+
+export const DashLinks = [
+  {
+    path:'/Dashboard/Tasks',
+    title:'Tasks'
+  },
+  {
+    path:'/Dashboard/Teams',
+    title:'Teams',
+  },
+]
 
 export const stats = [
   {
@@ -156,3 +166,34 @@ export const features = [
       "Simplicity is key our user-friendly approach makes tasks a breeze.",
   },
 ];  
+
+export const tabledata = [
+  {
+    id:0,
+    name:'Prishtina Devs',
+    Description: "Testing",
+    Location: 'Prishtina',
+    Status:'Active',
+  },
+  {
+    id:1,
+    name:'Tirana Devs',
+    Description: "Testing",
+    Location: 'Tirana',
+    Status:'Passive',
+  },
+  {
+    id:2,
+    name:'Paris Devs',
+    Description: "Testing",
+    Location: 'Paris',
+    Status:'Disabled',
+  },
+  {
+    id:5,
+    name:'Paris Devs',
+    Description: "Testing",
+    Location: 'Paris',
+    Status:'Active',
+  },
+]

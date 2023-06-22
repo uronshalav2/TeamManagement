@@ -7,9 +7,7 @@ import GetStarted from "./GetStarted";
 import Stats from "./Stats";
 import CTA from './CTA';
 import Bussines from './Bussines';
-import Button from './Button'
-import Sidebar from './Sidebar';
-import NavbarDashboard  from "./NavbarDashboard";
+import Button from './Button';
 
 export {
   Navbar,
@@ -21,7 +19,6 @@ export {
   Stats,
   CTA,
   Bussines,
-  Button,
-  Sidebar,
-  NavbarDashboard
+  Button
+
 };

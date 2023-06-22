@@ -7,7 +7,6 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <Fragment>
     <nav className='w-full flex py-6 justify-between items-center navbar'>
       <p><NavLink className={"w-[124px] h-[44px] text-gradient font-poppins font-semibold xs:text-[40px] text-[30px] items-center"} to="/">Tasks</NavLink></p>
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
@@ -16,6 +15,8 @@ const Navbar = () => {
             <NavLink to={`${nav.path}`}>
               {nav.title}
             </NavLink>
+
+            
           </li>          
         ))}
       </ul>
@@ -35,7 +36,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-    </Fragment>
   )
 }
 

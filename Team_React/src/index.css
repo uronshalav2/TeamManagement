@@ -140,6 +140,3 @@
   filter: blur(750px);
 }
 
-.sidebar {
-  @apply flex items-center mt-2 p-4 rounded-lg cursor-pointer hover:bg-white transition-all duration-300
-}
