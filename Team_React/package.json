@@ -10,10 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.7.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
     "appwrite": "^11.0.0",
     "axios": "^1.4.0",
+    "flowbite": "^1.6.6",
+    "flowbite-react": "^0.4.9",
+    "framer-motion": "^10.12.16",
     "hamburger-react": "^2.5.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

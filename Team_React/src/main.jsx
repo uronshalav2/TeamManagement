@@ -7,6 +7,7 @@ import { BrowserRouter, createBrowserRouter, RouterProvider,Routes, Route } from
 import Register from './Components/Register.jsx'
 import Login from './Components/Login.jsx'
 import Dashboard from './Dashboard.jsx'
+import Account from './Account.jsx'
 import DashboardTasks from './Components/DashboardComponents/DashboardTasks.jsx'
 import DashboardTeams from './Components/DashboardComponents/DashboardTeams.jsx'
 
@@ -32,9 +33,8 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path:"/Account/",
+    path:"/Account",
     errorElement: <Errorpage/>,
-
     children : [
       {
         path:'/Account/Login',
@@ -51,7 +51,9 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router = { router }/>
+    <RouterProvider router = { router }>
+      <App/>
+    </RouterProvider>
   </React.StrictMode>,
 )
 
